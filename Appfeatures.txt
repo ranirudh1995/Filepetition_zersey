@@ -1,0 +1,9 @@
+The FilePetition android app that I have developed has the following features :-
+
+	1. A navigation menu listing different sections :- Home, Sign up, Log In, Start Petition, View Petition List, etc.
+	2. A view for each of the above.
+	3. Control Flow :- A user first registers himself/herself in the database or directly logs in if he/she has already registered then goes to file a petition giving required details and finally the petition gets stored in the database and the list of petitions gets displayed when requested. A user cannot start a petition without logging into the system.
+
+	Note :- No validation is done during the registration or the logging in process. filepetition is the folder containing all .php files and Filepetition is the app folder
+
+

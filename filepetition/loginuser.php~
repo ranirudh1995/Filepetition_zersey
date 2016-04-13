@@ -1,0 +1,36 @@
+<?php
+ if($_SERVER['REQUEST_METHOD']=='POST'){
+
+ //Getting values
+
+ $email = $_POST['email'];
+$password = $_POST['encrypted_password'];
+
+$query1 = 'SELECT email,encrypted_password FROM users WHERE email = '$email' and encrypted_password = "anusha"';
+//$query2 = "SELECT `encrypted_password` FROM `users` WHERE `encrypted_password` = '$encrypted_password'";
+
+//$result1 = mysqli_query($con, "SELECT 'email' FROM users WHERE email='".$email."'");
+//$result2  = mysqli_query($con, "SELECT 'encrypted_password' FROM users WHERE encrypted_password='".$password."'");
+
+$result = mysqli_query($con,$query1);
+
+
+ //Importing our db connection script
+ require_once('dbConnect.php');
+
+ //Executing query to database
+ if( $result){
+ echo 'Login Successfull';
+ }else{
+	//echo $result1;
+//echo $result2;
+ echo $result1;
+ }
+
+ //Closing the database 
+ mysqli_close($con);
+ }
+//else{
+//echo 'error';
+//}
+?>
